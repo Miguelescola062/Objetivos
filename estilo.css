@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
-    --cor_de_fundo:#2C74B3;
+    --cor_de_fundo:#9CD5FF;
     --cor_texto_principal:"black";
     --cor_texto_secundario:#0A2647;
-    --botao_ativo:#205295;
+    --botao_ativo:#2C74B3;
     --botao_inativo:#2C74B3;
 }
 body{font-family: "Bebas Neue", sans-serif;
