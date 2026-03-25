@@ -15,4 +15,7 @@ color: var(--cor_texto_principal);
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
