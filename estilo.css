@@ -36,8 +36,8 @@ color:#0A2647;
     font-size: 18px;
     align-items: center;
     width: 100%;
-   border-bottom: 4px solid var(--botao_ativo); 
+    border-bottom: 4px solid var(--botao_ativo); 
     border-bottom: 2px solid var(--botao_ativo);
-     border-bottom: 2px solid var(--botao_ativo);
-     border-top: none;
+    border-bottom: 2px solid var(--botao_ativo);
+    border-top: none;
 }
