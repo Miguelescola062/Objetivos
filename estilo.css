@@ -41,3 +41,9 @@ color:#0A2647;
     border-right: 2px solid var(--botao_ativo);
     border-top: none;
 }
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+
+
+}
