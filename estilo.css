@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root{
-    --cor_de_fundo:#9CD5FF;
+    --cor_de_fundo:#3DC2EC;
     --cor_texto_principal:"black";
     --cor_texto_secundario:#0A2647;
     --botao_ativo:#2C74B3;
@@ -46,6 +46,11 @@ color:#0A2647;
     border-radius: 40px 40px 0 0;
 
 
+}
+
+.botao.ativo{
+    background-color:var(--botao_ativo);
+    border-bottom: 4px solid red;
 }
 @media screen and (min-width:768px){
 .botoes{
