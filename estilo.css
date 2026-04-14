@@ -52,6 +52,19 @@ color:#0A2647;
     background-color:var(--botao_ativo);
     border-bottom: 4px solid red;
 }
+
+.aba-conteudo.ativo{display: block;
+}
+
+.abas-textos{background-color: var(--cor_de_fundo);
+padding: 40px;
+border-radius: 0 0 40px 40px;
+}
+
+
+
+
+
 @media screen and (min-width:768px){
 .botoes{
     display: flex;
