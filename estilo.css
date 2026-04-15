@@ -50,7 +50,7 @@ color:#0A2647;
 
 .botao.ativo{
     background-color:var(--botao_ativo);
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid rgb(14, 199, 60);
 }
 
 .aba-conteudo.ativo{display: block;
