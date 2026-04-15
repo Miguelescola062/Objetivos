@@ -56,6 +56,8 @@ color:#0A2647;
 .aba-conteudo.ativo{display: block;
 }
 
+.aba-conteudo{display: none 
+    ;}
 .abas-texto{background-color: var(--botao_inativo);
 padding: 40px;
 border-radius: 0 0 40px 40px;
