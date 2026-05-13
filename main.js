@@ -1,7 +1,6 @@
 const botoes = document.querySelectorAll('.botao');
 const textos = document.querySelectorAll('.aba-conteudo');
 
-// Gerenciamento de abas ativo/inativo
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
         for (let j = 0; j < botoes.length; j++) {
@@ -13,10 +12,8 @@ for (let i = 0; i < botoes.length; i++) {
     }
 }
 
-// Seleção dos elementos HTML
 const contadores = document.querySelectorAll('.contador');
 
-// Array de datas nativas na ordem correta dos contadores
 const tempos = [
     new Date('2026-10-05T00:00:00'),
     new Date('2027-05-05T00:00:00'),
@@ -32,7 +29,6 @@ function calculaTempo(tempoObjetivo) {
         return "Prazo Encerrado";
     }
 
-    // Cálculos puramente nativos com Math
     let segundos = Math.floor(tempoFinal / 1000);
     let minutos = Math.floor(segundos / 60);
     let horas = Math.floor(minutos / 60);
@@ -42,16 +38,21 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
 
-    return `${dias} dias ${horas} horas ${minutos} minutos ${segundos} segundos`;
+    // Formata os números para terem sempre 2 dígitos (ex: 05 em vez de 5)
+    let diasFormatados = String(dias).padStart(2, '0');
+    let horasFormatadas = String(horas).padStart(2, '0');
+    let minutosFormatados = String(minutos).padStart(2, '0');
+    let segundosFormatados = String(segundos).padStart(2, '0');
+
+    return `${diasFormatados} dias ${horasFormatadas} horas ${minutosFormatados} minutos ${segundosFormatados} segundos`;
 }
 
-// Atualiza cada contador com base na sua posição (ordem) no array
 function atualizaCronometro() {
     for (let i = 0; i < contadores.length; i++) {
         contadores[i].textContent = calculaTempo(tempos[i]);
     }
 }
 
-// Execução inicial
+// Inicia o cronômetro imediatamente e atualiza a cada 1 segundo
 atualizaCronometro();
-
+setInterval(atualizaCronometro, 1000);
