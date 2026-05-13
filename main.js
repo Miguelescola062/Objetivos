@@ -10,6 +10,6 @@ for(let i = 0; i<botoes.length; i++){
             textos[j].classList.remove("ativo")
     }
     botoes[j].classList.add("ativo")
-    textos[j].classList.add("ativo")
+    abas-texto[j].classList.add("ativo")
 }
 }
