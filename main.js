@@ -1,6 +1,7 @@
 const botoes = document.querySelectorAll('.botao');
 const textos = document.querySelectorAll('.aba-conteudo');
 
+// Gerenciamento de abas ativo/inativo
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
         for (let j = 0; j < botoes.length; j++) {
@@ -12,19 +13,17 @@ for (let i = 0; i < botoes.length; i++) {
     }
 }
 
-// Seleção dos elementos da tela
+// Seleção dos elementos HTML
 const contadores = document.querySelectorAll('.contador');
 
-// Datas dos objetivos
-const tempoObjetivo1 = new Date('2026-10-05T00:00:00');
-const tempoObjetivo2 = new Date('2027-05-05T00:00:00');
-const tempoObjetivo3 = new Date('2028-02-05T00:00:00');
-const tempoObjetivo4 = new Date('2026-03-05T00:00:00');
+// Array de datas nativas na ordem correta dos contadores
+const tempos = [
+    new Date('2026-10-05T00:00:00'),
+    new Date('2027-05-05T00:00:00'),
+    new Date('2028-02-05T00:00:00'),
+    new Date('2026-03-05T00:00:00')
+];
 
-// Array de tempos exatamente na mesma ordem dos contadores do HTML
-const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
-
-// Função que calcula o tempo de um objetivo específico
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
     let tempoFinal = tempoObjetivo - tempoAtual;
@@ -33,6 +32,7 @@ function calculaTempo(tempoObjetivo) {
         return "Prazo Encerrado";
     }
 
+    // Cálculos puramente nativos com Math
     let segundos = Math.floor(tempoFinal / 1000);
     let minutos = Math.floor(segundos / 60);
     let horas = Math.floor(minutos / 60);
@@ -45,12 +45,13 @@ function calculaTempo(tempoObjetivo) {
     return `${dias} dias ${horas} horas ${minutos} minutos ${segundos} segundos`;
 }
 
-// Função que vincula cada tempo ao seu respectivo contador na tela
+// Atualiza cada contador com base na sua posição (ordem) no array
 function atualizaCronometro() {
     for (let i = 0; i < contadores.length; i++) {
         contadores[i].textContent = calculaTempo(tempos[i]);
     }
 }
 
-// Executa a função para atualizar os valores na tela
+// Execução inicial
 atualizaCronometro();
+
