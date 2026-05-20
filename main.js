@@ -12,7 +12,7 @@ for (let i = 0; i < botoes.length; i++) {
     }
 }
 
-const contadores = document.querySelectorAll('.contador-digito');
+const contadores = document.querySelectorAll('.contador');
 
 const tempos = [
     new Date('2026-10-05T00:00:00'),
